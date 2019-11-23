@@ -15,10 +15,10 @@
 
 	<!-- This project. -->
 	<groupId>de.beuth</groupId>
-	<artifactId>se2-application</artifactId>
+	<artifactId>se-test</artifactId>
 	<version>${project.version}-SNAPSHOT</version>
 
-	<name>se2-application</name>
+	<name>se-test</name>
 	<description>Software Engineering 2 application with Spring Boot</description>
 	<packaging>jar</packaging>
 
