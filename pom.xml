@@ -29,7 +29,7 @@
 		<junit.version>4.12</junit.version>
 		<openjfx.version>12</openjfx.version>
 
-		<maven.test.skip>false</maven.test.skip>
+		<maven.test.skip>true</maven.test.skip>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.compiler.source>1.12</project.compiler.source>

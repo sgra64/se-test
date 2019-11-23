@@ -1,5 +1,6 @@
 package com.application.se2.model;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.util.Date;
 
@@ -9,13 +10,15 @@ import com.application.se2.misc.EntityProperty;
 /**
  * Class Note represents a short text line to store short hints or comments
  * attached to Customer or Article Entities.
- * 
+ *
  * A Note consists of a timeStamp, a separator (comma) and noteText.
  * Example: "2018-04-02 10:16:24:868, This is a short note."
- * 
+ *
  * @author sgra64
  */
-public class Note {
+public class Note implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private static final String FieldSeparator = ";; ";
 	private static long lastTimeStamp = 0L;
 
@@ -27,7 +30,7 @@ public class Note {
 	/**
 	 * Public constructor.
 	 * Example noteStr: "2018-04-02 10:16:24:868, This is a text entry."
-	 * 
+	 *
 	 * @param noteStr input to parse Note instance.
 	 */
 	public Note( String noteStr ) {
@@ -42,7 +45,7 @@ public class Note {
 
 	/**
 	 * Return note's text section.
-	 * 
+	 *
 	 * @return note text.
 	 */
 	public String getText() {
@@ -52,7 +55,7 @@ public class Note {
 
 	/**
 	 * Set Note's text section.
-	 * 
+	 *
 	 * @param text note text.
 	 */
 	public void setText( String text ) {
