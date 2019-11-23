@@ -1,0 +1,107 @@
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent project file.
+	https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent
+	-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.8.RELEASE</version>
+	</parent>
+
+	<!-- This project. -->
+	<groupId>de.beuth</groupId>
+	<artifactId>se2-application</artifactId>
+	<version>${project.version}-SNAPSHOT</version>
+
+	<name>se2-application</name>
+	<description>Software Engineering 2 application with Spring Boot</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.version>2.0.0</project.version>
+
+		<springboot.version>2.1.8.RELEASE</springboot.version>
+		<junit.version>4.12</junit.version>
+		<openjfx.version>12</openjfx.version>
+
+		<maven.test.skip>false</maven.test.skip>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.compiler.source>1.12</project.compiler.source>
+		<project.compiler.target>1.12</project.compiler.target>
+	</properties>
+
+	<!-- Project dependencies. -->
+	<dependencies>
+	  <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter</artifactId>
+	  </dependency>
+
+	  <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+	  </dependency>
+
+	  <dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<scope>test</scope>
+	  </dependency>
+
+	  <!-- include open JavaFX openjfx dependency for Java -->
+	  <!-- https://stackoverflow.com/questions/52653836/maven-shade-javafx-runtime-components-are-missing -->
+	  <dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-fxml</artifactId>
+		<version>${openjfx.version}</version>
+	  </dependency>
+
+	 </dependencies>
+
+	<!-- Configurations for build stage. -->
+	<build>
+	  <plugins>
+
+		<!-- Use Spring Boots maven build plugin. -->
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+	  </plugins>
+
+	  <!-- Build plugin extension to copy/package resources needed during run-time to target -->
+	  <resources>
+		<resource>
+			<!-- Copy all files to ./target/classes -->
+			<directory>src/main/resources</directory>
+		</resource>
+		<resource>
+			<!-- Copy files from source tree to target -->
+			<directory>src/main/java</directory>
+			<includes>
+				<include>**/*.fxml</include>
+				<include>**/*.css</include>
+				<include>**/*.sql</include>
+			</includes>
+		</resource>
+	  </resources>
+
+	</build>
+
+	<reporting>
+	  <plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-report-plugin</artifactId>
+		</plugin>
+	  </plugins>
+	</reporting>
+
+</project>

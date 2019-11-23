@@ -1,0 +1,52 @@
+/*
+ * *******************************************************************
+ * Styles for main number panel and history panel.
+ */
+#calculator-displayfield, #calculator-sidearea .content {
+	-fx-background-color: #F0F3DC;
+}
+
+#calculator-displayfield, #calculator-sidearea {
+	-fx-border-color: #A0A0A0;
+	-fx-border-radius: 6px;
+}
+
+#calculator-displayfield {
+	-fx-border-width: 2px;
+	-fx-font-size: 20px;
+	-fx-alignment: center-right;
+	-fx-padding: 0px 6px 0px 6px;		/* top, right, bottom, left */
+}
+
+#calculator-displayfield {
+	-fx-font-size: 20px;
+}
+
+#calculator-sidearea {
+	-fx-border-width: 1px;
+	-fx-font-size: 16px;
+}
+
+#calculator-sidearea *.text {
+    -fx-text-alignment: right;
+}
+
+
+/*
+ * Styles for keypad buttons ( numbers: [0-9,1000,Komma], operators: [=,+,-,*,/,M+,MR,MC], controls: [C,CE,Hist,<-] ).
+ */
+.keypad-control, .keypad-MRC, .keypad-number, .keypad-operator {
+	-fx-background-radius: 4px;
+	-fx-padding: 0 0 0 0;
+	-fx-max-height: 1000.0;		/* expand button height to grid element */
+	-fx-max-width: 1000.0;		/* expand button width to grid element */
+}
+.keypad-control, .keypad-MRC {
+	-fx-font-size: 12px;
+}
+.keypad-number, .keypad-operator {
+	-fx-font-size: 20px;
+}
+.keypad-number-1000 {
+	-fx-font-size: 16px;
+}

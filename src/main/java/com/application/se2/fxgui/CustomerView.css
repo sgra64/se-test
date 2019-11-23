@@ -1,0 +1,102 @@
+/*
+ * General TableView definitions.
+ */
+
+/*
+ * Disable horizontal scrollbar.
+ *	.table-view#customer {	/* this does not work. * /
+ *		-fx-hbar-policy, -fx-vbar-policy: never | always | as-needed;
+ *	}
+ */
+.table-view .scroll-bar:horizontal * {
+    -fx-min-width:  0; -fx-pref-width:  0; -fx-max-width:  0;
+    -fx-min-height: 0; -fx-pref-height: 0; -fx-max-height: 0;
+}
+
+.table-view#customer .column-header, .table-view#customer .table-cell {
+	-fx-border-width: 1;			/* Show small border lines in headers and rows. */
+}
+.table-view#customer .column-header > .label, .table-view#customer .table-cell {
+	-fx-padding: 0 0 0 2;			/* top, right, bottom, left */
+	-fx-alignment: CENTER-LEFT;		/* alt. CENTER-RIGHT */
+}
+
+
+/*
+ * Column-specific definitions.
+ */
+ 
+ /* Id-Column */
+.table-view#customer .column-header#id {
+	/* -fx-background-color: #8cbf26; */
+}
+.table-view#customer .column-header#id > .label {
+	-fx-alignment: CENTER-LEFT;
+	-fx-padding: 0 0 0 6;				/* top, right, bottom, left */
+}
+
+.table-view#customer .table-row-cell #id,
+.table-view#customer .table-row-cell #status {
+	-fx-font-family: "Lucida Console";	/* monospaced: "Courier New", other fonts: "Segoe UI Semibold" */
+	/* -fx-font-size: 9pt; */
+	-fx-alignment: CENTER-LEFT;
+	-fx-padding: 0 0 0 8;				/* top, right, bottom, left */
+}
+
+
+.table-view#customer .table-row-cell #customer-contacts .button {
+  -fx-background-color: #d0d0ff; 	/* color name: corn silk, #f4d8ff, #fff4d8, #fff8dc-#000404 */
+  -fx-background-insets: 0;
+  -fx-padding: 0 0 0 4;				/* top, right, bottom, left */
+  -fx-pref-width: 24px;
+  -fx-pref-height: 18px;
+  -fx-alignment: CENTER-LEFT;
+}
+.table-view#customer .table-row-cell #customer-contacts .button:hover {
+	-fx-background-color: #d4b8ff;	/* color name: corn silk, #fff8dc-#002020 */
+}
+
+
+.table-view#customer .table-row-cell #customer-notes {
+	-fx-padding: 0 0 0 -2;				/* top, right, bottom, left */
+}
+.table-view#customer .table-row-cell #customer-notes .button {
+  -fx-background-color: #d1eace; 	/* color name: corn silk, #8bd387, #fff8dc-#000404 */
+  -fx-padding: 0 0 0 0;				/* top, right, bottom, left */
+  -fx-pref-width: 36px;
+  -fx-border-width: 0;
+}
+.table-view#customer .table-row-cell #customer-notes .button:hover {
+	-fx-background-color: #c1dabe;	/* color name: corn silk, #fff8dc-#002020 */
+}
+
+.table-view#customer .column-header#status > .label,			/* status column header */
+.table-view#customer .table-row-cell #status,					/* status line items */
+.table-view#customer .column-header#customer-notes > .label,	/* customer-notes header */
+.table-view#customer .table-row-cell #customer-notes > HBox {	/* customer-notes line items */
+	-fx-alignment: CENTER;
+}
+.table-view#customer .table-row-cell #customer-notes > HBox {	/* customer-notes lines with PopUp buttons */
+	-fx-padding: 0 0 4 -4;	/* top, right, bottom, left */		/* move Notes-button slightly up and left */
+}
+
+
+/* Styles for Contact, Note Popup's */
+.table-view#customer-contacts .column-header > .label, .table-view#customer-contacts .table-cell,
+.table-view#customer-notes .column-header > .label, .table-view#customer-notes .table-cell {
+	-fx-padding: 0 0 0 6;			/* top, right, bottom, left */
+	-fx-alignment: CENTER-LEFT;
+}
+
+/*
+ * for test purposes: Note PopUp.
+ * /
+.table-view#customer-notes .column-header#text > .label, .table-view#customer-notes .table-cell#text {
+	-fx-background-color: #8cbf26;
+}
+.table-view#customer-notes .column-header#timestamp > .label, .table-view#customer-notes .table-cell#timestamp {
+	-fx-background-color: #dfdfaf;
+}
+
+ *
+ */

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<!--
+ JavaFX FXML API version warning, https://stackoverflow.com/questions/35210120/javafx-fxml-api-version-warning
+ xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1"
+ If you use the form: xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx",
+ the versioning is ignored.
+-->
+
+<AnchorPane fx:id="fxTableView_AnchorPane"
+	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="378.0"
+	xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+	fx:controller="com.application.se2.fxgui.TableViewFXMLController"
+>
+   <children>
+      <GridPane fx:id="fxTableView_GridPane">
+         <children>
+            <TableView fx:id="fxTableView_TableView" editable="true" prefHeight="352.0" prefWidth="351.0">
+              <columns>
+                <!-- TableColumn fx:id="fxTableView_TableCol_ID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="fxTableView_TableCol_ID2" prefWidth="75.0" text="ID2" />
+                <TableColumn fx:id="fxTableView_TableCol_ID3" prefWidth="75.0" text="ID3" / -->
+              </columns>
+            </TableView>
+            <HBox fx:id="fxTableView_HBox" alignment="BOTTOM_LEFT" GridPane.rowIndex="1">
+               <children>
+                  <Button onAction="#fxTableView_New" text="NEW" />
+                  <Button onAction="#fxTableView_Update" text="UPDATE" />
+                  <Button onAction="#fxTableView_Delete" text="DEL" />
+                  <TextField promptText="search" />
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Button onAction="#fxTableView_Exit" text="EXIT ">
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,61 @@
+/*
+ * For reference, not used any more.
+ */
+
+.tableview-anchorpane {
+	/* -fx-border-color: red;	/**/
+}
+
+.tableview-anchorpane > .tableview-gridpane {
+	/* -fx-border-color: red;	/* show tableview border */
+	-fx-padding: 0 2 0 2;		/* small padding top, right, bottom, left */
+	/*
+	 * GridPane is linked for resize events to Scene with offset 29 from the bottom.
+	 * See TableViewFXMLController.java:
+	 * fxTableView_GridPane.prefHeightProperty().bind(
+	 *		fxTableView_AnchorPane.heightProperty().subtract( 29 ) );
+	 */
+}
+
+.tableview-anchorpane > .tableview-gridpane > .tableview {
+	/* -fx-border-color: red;	/* show tableview border */
+}
+
+.tableview-anchorpane > .tableview-gridpane > .hbox {
+	-fx-padding: 3 4 3 4;	/* height of footer bar as paddings to elements */
+	-fx-spacing: 10;		/* horizontal spacing between hbox elements */
+	-fx-alignment: CENTER;	/* elements vertically centered in hbox */
+	/* -fx-border-color: red;	/* show hbox border */
+	/*
+	 * Use <Pane HBox.hgrow="ALWAYS" /> in .fxml to force filling horizontal
+	 * space to make the EXIT-button to move to the right-end.
+	 */
+}
+
+.tableview-anchorpane > .tableview-gridpane > .hbox > .button {
+	-fx-min-width: 60;		/* give button a minimum width */
+	-fx-padding: 0 0 0 0;	/* remove padding between button text and border */
+}
+
+.tableview-anchorpane > .tableview-gridpane > .hbox > .text-field {
+	-fx-pref-width: 480;	/* default width */
+	-fx-padding: 0 4 0 10;	/* padding inside the text field */
+	-fx-border-color: grey;
+	-fx-border-width: 1;
+	-fx-border-radius: 4;
+	/* -fx-background-color: transparent; */
+	-fx-text-fill: black;
+}
+
+
+/*
+ * Disable horizontal scrollbar in TableView.
+ * Source: https://community.oracle.com/thread/2377826
+ */
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}

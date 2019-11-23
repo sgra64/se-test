@@ -1,0 +1,33 @@
+
+/*
+ * Column-specific definitions.
+ */
+
+ /* Id-Column */
+.table-view#article .column-header#id {
+	/* -fx-background-color: #8cbf26; */
+}
+.table-view#article .column-header#id > .label,
+.table-view#article .column-header#name > .label,
+.table-view#article .table-row-cell #name {
+	-fx-alignment: CENTER-LEFT;
+	-fx-padding: 0 0 0 6;				/* top, right, bottom, left */
+}
+
+.table-view#article .table-row-cell #id {
+	-fx-font-family: "Lucida Console";	/* monospaced: "Courier New", other fonts: "Segoe UI Semibold" */
+	/* -fx-font-size: 9pt; */
+	-fx-alignment: CENTER-LEFT;
+	-fx-padding: 0 0 0 8;				/* top, right, bottom, left */
+}
+
+.table-view#article .table-row-cell #price {
+	-fx-alignment: CENTER-RIGHT;
+}
+
+.table-view#article .column-header#status > .label,			/* status column header */
+.table-view#article .table-row-cell #status,					/* status line items */
+.table-view#article .column-header#article-notes > .label,	/* article-notes header */
+.table-view#article .table-row-cell #article-notes > HBox {	/* article-notes line items */
+	-fx-alignment: CENTER;
+}

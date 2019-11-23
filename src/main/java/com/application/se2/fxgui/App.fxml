@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.se2.fxgui.AppFXMLController">
+   <center>
+      <TabPane fx:id="fxApp_TabsPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab id="Main" text="Default" fx:id="fxApp_MainTab">
+            <content>
+              <AnchorPane>
+                <children>
+                  <Button layoutX="25.0" layoutY="35.0" mnemonicParsing="false" onMouseReleased="#exitButton" prefHeight="25.0" prefWidth="76.0" text="Exit" />
+                </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
