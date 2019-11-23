@@ -23,7 +23,7 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.version>2.0.0</project.version>
+		<project.version>2.1.0</project.version>
 
 		<springboot.version>2.1.8.RELEASE</springboot.version>
 		<junit.version>4.12</junit.version>
